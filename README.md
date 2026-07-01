@@ -113,3 +113,34 @@ Implementar uma **Lista Linear Estática** utilizando arrays e `structs` para re
    gcc inventario.c -o inventario
 
    -------------------------------------------------------------------------------------------------------
+
+Nível Aventureiro 2.0
+
+# 🎒 Inventário de Sobrevivência: Ilha TechNova (Nível Aventureiro)
+
+Nesta segunda fase do desenvolvimento do sistema de inventário, o projeto evolui para testar os limites do gerenciamento de memória em C. O objetivo deste nível é colocar duas estruturas de dados lado a lado e analisar suas diferenças de implementação e flexibilidade.
+
+## 🎯 Objetivo do Nível
+Implementar e comparar paralelamente um sistema de inventário utilizando **Vetores (Lista Linear Estática)** e **Listas Encadeadas (Lista Linear Dinâmica)**, permitindo ao jogador escolher sua estratégia no início da partida.
+
+## 🛠️ O Confronto de Estruturas
+
+### 1. Mochila Rígida (Vetor)
+* **Característica:** Memória alocada estaticamente (`Item mochila[10]`).
+* **Vantagem:** Navegação rápida e direta (acesso por índice).
+* **Desvantagem:** Tamanho fixo (limite de 10 itens). Se a mochila encher, não é possível pegar mais *loot*. Ocupa memória mesmo se estiver vazia.
+
+### 2. Mochila Expansível (Lista Encadeada)
+* **Característica:** Memória alocada dinamicamente (`malloc`). 
+* **Vantagem:** Tamanho ilimitado. A mochila cresce sob demanda, alocando memória apenas quando um novo item é encontrado, e liberando (`free`) quando é descartado.
+* **Desvantagem:** Navegação sequencial obrigatória via ponteiros (`->proximo`), o que pode ser mais lento para buscas em inventários colossais.
+
+## 🚀 Como Executar
+
+1. Compile o código-fonte utilizando o GCC:
+   ```bash
+   gcc inventario_aventureiro.c -o inventario_v2
+
+   ------------------------------------------------------------------------------------------------------------------------------------------------
+
+   
