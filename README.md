@@ -143,4 +143,32 @@ Implementar e comparar paralelamente um sistema de inventário utilizando **Veto
 
    ------------------------------------------------------------------------------------------------------------------------------------------------
 
-   
+   Nível Mestre 3.0 
+
+   # 🗼 Torre de Fuga: Ilha TechNova (Nível Mestre)
+
+Bem-vindo ao estágio final do desafio. Neste nível, abandonamos as mochilas básicas e focamos na engenharia de software avançada: a organização estratégica de dados utilizando algoritmos clássicos de ordenação e busca otimizada.
+
+## 🎯 Objetivo do Sistema
+Desenvolver um módulo em C capaz de receber componentes de uma torre, ordená-los sob múltiplos critérios e encontrar peças-chave em tempo recorde utilizando manipulação de memória e ponteiros de função.
+
+## ⚙️ Arquitetura e Algoritmos
+
+### 1. Métodos de Ordenação Implementados
+O sistema permite ao jogador escolher como deseja organizar sua base de dados, oferecendo as seguintes abordagens:
+* **Bubble Sort (Por Nome):** Abordagem didática de comparação e troca entre vizinhos. Utiliza `strcmp` para ordenação alfabética rigorosa.
+* **Selection Sort (Por Prioridade):** Algoritmo de busca do menor elemento a cada iteração, minimizando operações de *swap* na memória.
+* **Insertion Sort (Por Tipo):** Ordenação fluida similar à organização de cartas, empurrando elementos maiores para a direita.
+
+### 2. A Busca Binária
+A busca sequencial foi substituída pela Busca Binária ($O(\log n)$), permitindo localizar o componente-chave da torre fatiando o vetor ordenado recursivamente/iterativamente. É estritamente necessário realizar a ordenação por Nome (Opção 3) antes de acionar este radar.
+
+### 3. Medidor de Desempenho (Profiling)
+Através da biblioteca `<time.h>` e do uso de ponteiros de função (`void (*algoritmo)`), o sistema cronometra o tempo de execução e o número de comparações de cada algoritmo, oferecendo feedback de *Big O Notation* prático ao usuário.
+
+## 🚀 Como Executar
+1. Compile o sistema base:
+   ```bash
+   gcc torre_mestre.c -o torre_mestre  
+
+   ./torre_mestre
